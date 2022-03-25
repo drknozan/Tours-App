@@ -1,0 +1,87 @@
+@use 'variables';
+
+.tours {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+    @media screen and (max-width: 700px) {
+        grid-template-columns: 100vw;
+    }
+}
+
+.tour {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba($color: variables.$primary-color, $alpha: .5);
+    border-radius: 10px;
+    box-shadow: 5px 10px 10px rgba($color: #7d7d7d, $alpha: .4);
+    padding: 1rem;
+    margin: 1rem 1rem;
+    &__title {
+        font-size: 2rem;
+        margin: 1rem;
+        color: variables.$primary-color;
+    }
+    &__image {
+        margin: 1rem;
+        width: 35vw;
+        height: 35vh;
+        @media screen and (max-width: 700px) {
+            width: 80vw;
+            height: 65vh;
+        }
+        box-shadow: 5px 10px 10px rgba($color: rgb(146, 146, 146), $alpha: 1);
+        border-radius: 10px;
+        object-fit: cover;
+        transition: all .5s;
+    }
+
+    &__description {
+        margin: 1rem;
+        color: variables.$text-dark-color;
+    }
+
+    &__reservation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__date__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: variables.$text-light-color;
+        @media screen and (max-width: 1049px) {
+            flex-direction: column;
+        }
+    }
+
+    &__date {
+        margin: 1rem;
+    }
+
+    &__add {
+        margin: 1rem;
+        width: 10vw;
+        height: 5vh;
+        align-self: center;
+        background-color: transparent;
+        border-radius: 10px;
+        background-color: variables.$secondary-color;
+        border: none;
+        box-shadow: 5px 5px 10px rgba($color: rgb(146, 146, 146), $alpha: .6);
+        color: white;
+        
+        cursor: pointer;
+        &:active {
+            transform: scale(.95);
+        }
+        @media screen and (max-width: 1049px) {
+            width: 100px;
+        }
+    }
+}

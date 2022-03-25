@@ -1,0 +1,34 @@
+@use 'variables';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    border-bottom: 1px solid rgba($color: variables.$primary-color, $alpha: .5);
+    &__about {
+        font-size: 1.2rem;
+        font-family: cursive;
+        color: var(primary-color);
+        cursor: pointer;
+        margin-left: 1.5rem;
+        color: variables.$primary-color;
+    }
+
+    &__logo {
+        font-family: cursive;
+        font-size: 4rem;
+        cursor: pointer;
+        color: variables.$primary-color;
+    }
+    
+    &__tours {
+        cursor: pointer;
+        margin-right: 1.5rem;
+        color: variables.$primary-color;
+    }
+}
