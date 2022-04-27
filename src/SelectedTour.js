@@ -1,7 +1,6 @@
 import React from 'react'
 
 const SelectedTour = ({ tourData }) => {
-    console.log(tourData)
     return (
         <div className='selected_tour'>
             <div className='selected_tour__destination'>
